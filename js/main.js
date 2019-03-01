@@ -52,8 +52,11 @@ var createBoard = function() {
 		cardElement.setAttribute('src', 'images/back.png');
 		cardElement.setAttribute('data-id', i);
 		cardElement.addEventListener('click', flipCard);
-		cardElement.appendChild().getElementById('game-board');
+		//cardElement.appendChild('#game-board');
+		document.getElementById('game-board').appendChild('cardElement');
 	}
+
+	//document.getElementById("myList").appendChild(node);
 };
 
 createBoard();
