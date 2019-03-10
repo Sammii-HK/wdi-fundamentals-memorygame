@@ -35,7 +35,8 @@ var flipCard = function() {
 
 	cardsInPlay.push(cards[cardId].rank);
 
-	this.cards[cardId].cardImage.setAttribute('src');
+	this.cards[cardId].cardImage.setAttribute('src', cards[cardId].cardImage);
+	//this.cards[cardId].cardImage.setAttribute('src');
 
 	if (cardsInPlay.length === 2) {
 		if (cardsInPlay[0] === cardsInPlay[1]) {
@@ -53,7 +54,7 @@ var createBoard = function() {
 		cardElement.setAttribute('data-id', i);
 		cardElement.addEventListener('click', flipCard);
 		//cardElement.appendChild('#game-board');
-		document.getElementById('game-board').appendChild('cardElement');
+		document.getElementById('game-board').appendChild(cardElement);
 	}
 
 	//document.getElementById("myList").appendChild(node);
